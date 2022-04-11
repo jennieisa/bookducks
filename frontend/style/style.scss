@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px;
+    padding-top: 40px;
     padding-bottom: 80px;
 }
 
@@ -188,6 +188,63 @@ h2 {
     background-color: gray;
     margin: 5px;
 }
+
+//Lägg till ny produkt sida
+
+.addNewProdWrapper {
+    background-color: $lightBeige;
+    width: 95vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    button {
+        background-color: $mintGreen;
+    }
+}
+
+.addNewProdContentWrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.radioBtnSection {
+    label{
+        font-family: $serifFont;
+    }
+}
+
+.addNewProdForm {
+    background-color: white;
+    margin-left: 30px;
+    padding: 30px;
+    width: 90%;
+}
+
+.twoSections {
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+    .firstSection {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .secondSection {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.thirdSection {
+    margin-bottom: 30px;
+}
+
 
 //Style klasser
 

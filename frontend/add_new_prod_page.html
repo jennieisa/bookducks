@@ -25,53 +25,61 @@
             <h1>bookducks</h1>
         </a>
     </header>
-    <main>
+    <main class="addNewProdWrapper">
         <h2>lägg till produkt</h2>
-        <section>
-            <input type="radio">
-            <label for="">bok</label>
-            <input type="radio">
-            <label for="">ljudbok</label>
-        </section>
-        <article>
-            <form action="">
-                <section>
-                    <label for="">titel</label>
-                    <input type="text">
-                    <label for="">författare</label>
-                    <input type="text">
-                    <label for="">antal sidor/längd</label>
-                    <input type="number">
-                </section>
-                <section>
-                    <label for="">betyg</label>
-                    <input type="number" placeholder="1-10">
-                    <section>
-                        <h3>genre</h3>
-                        <input type="checkbox">
-                        <label for="">skräck</label>
-                        <input type="checkbox">
-                        <label for="">romantik</label>
-                        <input type="checkbox">
-                        <label for="">humor</label>
-                        <input type="checkbox">
-                        <label for="">barnvänlig</label>
-                        <input type="checkbox">
-                        <label for="">fantasy</label>
-                        <input type="checkbox">
-                        <label for="">sci-fi</label>
-                        <input type="checkbox">
-                        <label for="">action</label>
-                        <input type="checkbox">
-                        <label for="">kriminalare</label>
-                        <input type="checkbox">
+        <article class="addNewProdContentWrapper">
+            <section class="radioBtnSection">
+                <div>
+                    <input type="radio" name="typeOfProd">
+                    <label for="">bok</label>
+                </div>
+                <div>
+                    <input type="radio" name="typeOfProd">
+                    <label for="">ljudbok</label>
+                </div>
+            </section>
+            <article>
+                <form action="" class="addNewProdForm">
+                    <div class="twoSections">
+                        <section class="firstSection">
+                            <label for="" class="labelStyle">titel</label>
+                            <input type="text" class="inputStyle">
+                            <label for="" class="labelStyle">författare</label>
+                            <input type="text" class="inputStyle">
+                            <label for="" class="labelStyle">antal sidor/längd</label>
+                            <input type="number" class="inputStyle">
+                        </section>
+                        <section class="secondSection">
+                            <label for="" class="labelStyle">betyg</label>
+                            <input type="number" placeholder="1-10" class="inputStyle">
+                            <section>
+                                <h3 class="labelStyle">genre</h3>
+                                <input type="checkbox">
+                                <label for="" class="labelStyle">skräck</label>
+                                <input type="checkbox">
+                                <label for="" class="labelStyle">romantik</label>
+                                <input type="checkbox">
+                                <label for="" class="labelStyle">humor</label>
+                                <input type="checkbox">
+                                <label for="" class="labelStyle">barnvänlig</label>
+                                <input type="checkbox">
+                                <label for="" class="labelStyle">fantasy</label>
+                                <input type="checkbox">
+                                <label for="" class="labelStyle">sci-fi</label>
+                                <input type="checkbox">
+                                <label for="" class="labelStyle">action</label>
+                                <input type="checkbox">
+                                <label for="" class="labelStyle">kriminalare</label>
+                                <input type="checkbox">
+                            </section>
+                        </section>
+                    </div>
+                    <section class="thirdSection">
+                        <input type="file" class="labelStyle">
                     </section>
-                </section>
-                <section>
-                    <input type="file">
-                </section>
-                <button>ladda upp produkt</button>
-            </form>
+                    <button class="buttonStyle">ladda upp produkt</button>
+                </form>
+            </article>
         </article>
     </main>
 </body>
