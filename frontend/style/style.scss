@@ -1,5 +1,6 @@
 @import "variables.scss", "mixins.scss";
 
+//För alla sidor
 body {
     margin: 0px;
     padding: 0px;
@@ -38,6 +39,14 @@ main {
     flex-direction: column;
     align-items: center;
 }
+
+h2 {
+    font-family: $sansSerifFont;
+    font-weight: 400;
+    text-align: center;
+}
+
+//För startsidan
 
 .landingPageContent {
     width: 90%;
@@ -78,7 +87,64 @@ main {
     }
 }
 
+//För logga in sidan
+.logInContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: $lightBeige;
+}
+
+.logInForm {
+    display: flex;
+    flex-direction: column;
+
+    button {
+        background-color: $mintGreen;
+    }
+}
+
+//Style klasser
+
 .noLinkStyle {
     text-decoration: none;
     color: $black;
+}
+
+.currentPage {
+    font-weight: 800;
+}
+
+.buttonStyle {
+    width: 300px;
+    height: 35px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.184);
+    font-family: $sansSerifFont;
+    background-color: $lightGray;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.labelStyle {
+    font-family: $sansSerifFont;
+}
+
+.paraStyle {
+    font-family: $sansSerifFont;
+    text-align: center;
+}
+
+.inputStyle {
+    width: 300px;
+    height: 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: $lightGray;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.184);
+    padding: 6px;
+    font-family: $sansSerifFont;
+    margin: 5px 0px 20px 0px;
 }
