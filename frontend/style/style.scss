@@ -1,3 +1,5 @@
+@import "variables.scss", "mixins.scss";
+
 body {
     margin: 0px;
     padding: 0px;
@@ -5,18 +7,78 @@ body {
 
 .mainHeader {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     padding: 40px;
+    padding-bottom: 80px;
 }
 
 nav {
-    width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 30px;
 
-    i {
+    a {
+        font-family: $sansSerifFont;
+        font-weight: 500;
+        font-size: 20px;
     }
 }
 
-img {
-    width: 50%;
+h1 {
+    font-family: $serifFont;
+    font-weight: normal;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landingPageContent {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+    .imageAndText1 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .imageAndText2 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        p {
+            background-color: $mintGreen;
+        }
+    }
+
+    p {
+        padding-left: 30px;
+        padding-right: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $lightGray;
+        margin: 0px;
+        font-family: $sansSerifFont;
+        font-size: 15px;
+    }
+
+    img {
+        width: 45%;
+    }
+}
+
+.noLinkStyle {
+    text-decoration: none;
+    color: $black;
 }
