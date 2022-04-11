@@ -1,1 +1,27 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.mainHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px;
+}
+
+nav {
+  width: 50%;
+}
+
+img {
+  width: 50%;
+}
+/*# sourceMappingURL=style.css.map */

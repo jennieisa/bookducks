@@ -1,0 +1,22 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.mainHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+nav {
+    width: 50%;
+
+    i {
+    }
+}
+
+img {
+    width: 50%;
+}
