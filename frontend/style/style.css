@@ -1,9 +1,20 @@
 body {
   margin: 0px;
   padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .mainHeader {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,6 +72,8 @@ h2 {
   font-family: "Mulish", sans-serif;
   font-weight: 400;
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .landingPageContent {
@@ -137,7 +150,7 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
+  width: 95vw;
   height: 100vh;
   background-color: #e1cfc1;
 }
@@ -154,6 +167,26 @@ h2 {
 
 .logInForm button {
   background-color: #bec9c5;
+}
+
+.createUserContent {
+  background-color: #bec9c5;
+  width: 95vw;
+  height: 100vh;
+}
+
+.createUserFrom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.createUserFrom button {
+  background-color: #e1cfc1;
 }
 
 .noLinkStyle {

@@ -4,9 +4,13 @@
 body {
     margin: 0px;
     padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .mainHeader {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,6 +48,8 @@ h2 {
     font-family: $sansSerifFont;
     font-weight: 400;
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 //För startsidan
@@ -92,7 +98,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 95vw;
     height: 100vh;
     background-color: $lightBeige;
 }
@@ -103,6 +109,22 @@ h2 {
 
     button {
         background-color: $mintGreen;
+    }
+}
+
+//För skapa användare sidan
+.createUserContent {
+    background-color: $mintGreen;
+    width: 95vw;
+    height: 100vh;
+}
+
+.createUserFrom {
+    display: flex;
+    flex-direction: column;
+
+    button {
+        background-color: $lightBeige;
     }
 }
 
