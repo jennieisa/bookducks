@@ -189,6 +189,92 @@ h2 {
   background-color: #e1cfc1;
 }
 
+.mySiteWrapper {
+  background-color: #d0d9f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95vw;
+  height: 100vh;
+}
+
+.mySiteContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.userInfoWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  width: 40%;
+  padding: 15px;
+}
+
+.userInfoWrapper p {
+  font-family: "Playfair Display", serif;
+}
+
+.userProdsWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5f5f5;
+  width: 40%;
+  padding: 15px;
+}
+
+.userProdsWrapper h3 {
+  font-family: "Mulish", sans-serif;
+}
+
+.userProdsWrapper button {
+  background-color: #bec9c5;
+}
+
+.userProdList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.userProd {
+  width: 80px;
+  height: 80px;
+  background-color: gray;
+  margin: 5px;
+}
+
 .noLinkStyle {
   text-decoration: none;
   color: #2e2f29;
