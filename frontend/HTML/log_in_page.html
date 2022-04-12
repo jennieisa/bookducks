@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logga in</title>
+    <script src="https://kit.fontawesome.com/70d353c5b5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/frontend/style/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;700&family=Playfair+Display&display=swap');
+    </style>
+</head>
+<body>
+    <header class="mainHeader">
+        <nav>
+            <!--<a href="#">
+                <i class="fa-solid fa-bars"></i>
+            </a> -->
+            <a href="/frontend/HTML/log_in_page.html" class="noLinkStyle currentPage">logga in</a>
+            <a href="/frontend/HTML/products_page.html" class="noLinkStyle">produkter</a>
+            <a href="#" class="noLinkStyle">om oss</a>
+        </nav>
+        <a href="/frontend/HTML/landing_page.html" class="noLinkStyle">
+            <h1>bookducks</h1>
+        </a>
+    </header>
+    <main class="logInContent">
+        <form class="logInForm">
+            <h2>logga in</h2>
+            <label for="" class="labelStyle">användarnamn</label>
+            <input type="text" class="inputStyle">
+            <label for="" class="labelStyle">lösenord</label>
+            <input type="password" class="inputStyle"> 
+            <button class="buttonStyle">logga in</button>
+        </form>
+        <section>
+            <p class="paraStyle">eller</p>
+            <button class="buttonStyle createUserBtn">skapa användare</button>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/frontend/javaScript/log_in_page.js"></script>
+</body>
+</html>

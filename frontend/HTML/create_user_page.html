@@ -17,11 +17,11 @@
             <!--<a href="#">
                 <i class="fa-solid fa-bars"></i>
             </a> -->
-            <a href="/frontend/log_in_page.html" class="noLinkStyle currentPage">logga in</a>
-            <a href="/frontend/products_page.html" class="noLinkStyle">produkter</a>
+            <a href="/frontend/HTML/log_in_page.html" class="noLinkStyle currentPage">logga in</a>
+            <a href="/frontend/HTML/products_page.html" class="noLinkStyle">produkter</a>
             <a href="#" class="noLinkStyle">om oss</a>
         </nav>
-        <a href="/frontend/landing_page.html" class="noLinkStyle">
+        <a href="/frontend/HTML/landing_page.html" class="noLinkStyle">
             <h1>bookducks</h1>
         </a>
     </header>
@@ -29,13 +29,15 @@
         <h2>skapa användare</h2>
         <form class="createUserFrom">
             <label for="" class="labelStyle">användarnamn</label>
-            <input type="text" class="inputStyle">
+            <input type="text" class="inputStyle userNameInput">
             <label for="" class="labelStyle">epostadress</label>
-            <input type="email" class="inputStyle">
+            <input type="email" class="inputStyle emailInput">
             <label for="" class="labelStyle">lösenord</label>
-            <input type="password" class="inputStyle">
+            <input type="password" class="inputStyle passwordInput">
             <button class="buttonStyle">skapa användare</button>
         </form>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/frontend/javaScript/create_user_page.js"></script>
 </body>
 </html>
