@@ -1,5 +1,6 @@
 //DOM:en
 const userInfoWrapper = document.querySelector(".userInfoWrapper");
+const addNewProdBtn = document.querySelector(".addNewProdBtn");
 
 //funktioner
 async function drawUserInfo() {
@@ -22,5 +23,12 @@ async function drawUserInfo() {
     }
 
 }
-
 drawUserInfo();
+
+//Eventlisterners
+addNewProdBtn.addEventListener("click", () => {
+
+    window.location.href="add_new_prod_page.html";
+
+})
+
