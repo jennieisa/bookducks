@@ -205,6 +205,7 @@ h2 {
   width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-bottom: 30px;
 }
 
 .userInfoWrapper {
