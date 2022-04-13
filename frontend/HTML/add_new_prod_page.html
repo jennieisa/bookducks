@@ -30,58 +30,60 @@
         <article class="addNewProdContentWrapper">
             <section class="radioBtnSection">
                 <div>
-                    <input type="radio" name="typeOfProd">
-                    <label for="">bok</label>
+                    <input type="radio" name="typeOfProd" id="radioBtnBook" value="books">
+                    <label for="radioBtnBook">bok</label>
                 </div>
                 <div>
-                    <input type="radio" name="typeOfProd">
-                    <label for="">ljudbok</label>
+                    <input type="radio" name="typeOfProd" id="radioBtnAudioBook" value="audiobooks">
+                    <label for="radioBtnAudioBook">ljudbok</label>
                 </div>
             </section>
             <article>
                 <form action="" class="addNewProdForm">
                     <div class="twoSections">
                         <section class="firstSection">
-                            <label for="" class="labelStyle">titel</label>
-                            <input type="text" class="inputStyle">
-                            <label for="" class="labelStyle">författare</label>
-                            <input type="text" class="inputStyle">
-                            <label for="" class="labelStyle">antal sidor/längd</label>
-                            <input type="number" class="inputStyle">
+                            <label for="inputTitle" class="labelStyle">titel</label>
+                            <input type="text" class="inputStyle" id="inputTitle">
+                            <label for="inputAuthor" class="labelStyle">författare</label>
+                            <input type="text" class="inputStyle" id="inputAuthor">
+                            <label for="inputLength" class="labelStyle">antal sidor/längd</label>
+                            <input type="number" class="inputStyle" id="inputLength">
                         </section>
                         <section class="secondSection">
-                            <label for="" class="labelStyle">betyg</label>
-                            <input type="number" placeholder="1-10" class="inputStyle">
+                            <label for="inputGrade" class="labelStyle">betyg</label>
+                            <input type="number" placeholder="1-10" class="inputStyle" id="inputGrade">
                             <section>
                                 <h3 class="labelStyle">genre</h3>
-                                <input type="checkbox">
-                                <label for="" class="labelStyle">skräck</label>
-                                <input type="checkbox">
-                                <label for="" class="labelStyle">romantik</label>
-                                <input type="checkbox">
-                                <label for="" class="labelStyle">humor</label>
-                                <input type="checkbox">
-                                <label for="" class="labelStyle">barnvänlig</label>
-                                <input type="checkbox">
-                                <label for="" class="labelStyle">fantasy</label>
-                                <input type="checkbox">
-                                <label for="" class="labelStyle">sci-fi</label>
-                                <input type="checkbox">
-                                <label for="" class="labelStyle">action</label>
-                                <input type="checkbox">
-                                <label for="" class="labelStyle">kriminalare</label>
-                                <input type="checkbox">
+                                <input type="checkbox" id="inputHorror" name="genre" value="1">
+                                <label for="inputHorror" class="labelStyle">skräck</label>
+                                <input type="checkbox" id="inputRomance" name="genre" value="2">
+                                <label for="inputRomance" class="labelStyle">romantik</label>
+                                <input type="checkbox" id="inputHumor" name="genre" value="3">
+                                <label for="inputHumor" class="labelStyle">humor</label>
+                                <input type="checkbox" id="inputChildFriendly" name="genre" value="4">
+                                <label for="inputChildFriendly" class="labelStyle">barnvänlig</label>
+                                <input type="checkbox" id="inputFantasy" name="genre" value="5">
+                                <label for="inputFantasy" class="labelStyle">fantasy</label>
+                                <input type="checkbox" id="inputSciFi" name="genre" value="6">
+                                <label for="inputSciFi" class="labelStyle">sci-fi</label>
+                                <input type="checkbox" input="inputAction" name="genre" value="7">
+                                <label for="inputAction" class="labelStyle">action</label>
+                                <input type="checkbox" id="inputCrime" name="genre" value="8">
+                                <label for="inputCrime" class="labelStyle">kriminalare</label>
+                                <input type="checkbox" name="genre">
                             </section>
                         </section>
                     </div>
                     <section class="thirdSection">
-                        <input type="file" class="labelStyle">
+                        <input type="file" class="labelStyle" id="inputFile">
                     </section>
-                    <button class="buttonStyle">ladda upp produkt</button>
+                    <button class="buttonStyle addNewProdBtn">ladda upp produkt</button>
                 </form>
             </article>
         </article>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/frontend/javaScript/main.js"></script>
+    <script src="/frontend/javaScript/add_new_prod.js"></script>
 </body>
 </html>
