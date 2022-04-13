@@ -6,6 +6,7 @@ const inputAuthor = document.querySelector("#inputAuthor");
 const inputLength = document.querySelector("#inputLength");
 const inputGrade = document.querySelector("#inputGrade");
 const inputGenre = document.querySelectorAll("[name='genre']");
+const inputReleaseDate = document.querySelector("#inputReleaseDate")
 
 //Funktioner
 async function addNewBook(genres) {
@@ -91,22 +92,127 @@ async function addNewAudiobook() {
 
 //Eventlisterners
 
+let typeOfProd = "";
+
+radioBtns[0].addEventListener("click", () => {
+
+    radioBtns.forEach(btn => {
+
+        if (btn.checked) {
+
+            typeOfProd = btn.value;
+
+        }
+
+        if(typeOfProd == "audiobooks") {
+        
+            inputAuthor.classList.add("hideElem");
+
+            inputAuthor.previousElementSibling.classList.add("hideElem");
+        
+            inputReleaseDate.classList.remove("hideElem");
+        
+            inputReleaseDate.previousElementSibling.classList.remove("hideElem");
+        
+        
+        } else {
+        
+            inputReleaseDate.classList.add("hideElem");
+        
+            inputReleaseDate.previousElementSibling.classList.add("hideElem");
+        
+            inputAuthor.classList.remove("hideElem");
+
+            inputAuthor.previousElementSibling.classList.remove("hideElem");
+        
+        }
+    })
+
+    console.log(typeOfProd);
+
+}) 
+
+
+radioBtns[1].addEventListener("click", () => {
+
+    radioBtns.forEach(btn => {
+    
+        if (btn.checked) {
+    
+            typeOfProd = btn.value;
+    
+        }
+
+        if(typeOfProd == "audiobooks") {
+
+            console.log(btn.value)
+        
+            inputAuthor.classList.add("hideElem");
+        
+            console.log(inputAuthor)
+        
+            inputReleaseDate.classList.remove("hideElem");
+        
+            inputReleaseDate.previousElementSibling.classList.remove("hideElem");
+        
+        } else {
+        
+            inputReleaseDate.classList.add("hideElem");
+        
+            inputReleaseDate.previousElementSibling.classList.add("hideElem");
+        
+            inputAuthor.classList.remove("hideElem");
+        
+        }
+    })
+    
+    console.log(typeOfProd);
+    
+}) 
+
+
+/*{
+
+    btn.addEventListener("click", () => {
+
+        if (btn.checked) {
+
+            if(typeOfProd == "audiobooks") {
+
+                console.log(btn.value)
+
+                inputAuthor.classList.add("hideElem");
+
+                console.log(inputAuthor)
+
+                inputReleaseDate.classList.remove("hideElem");
+
+                inputReleaseDate.previousElementSibling.classList.remove("hideElem");
+
+                input
+            
+            } else {
+
+                inputReleaseDate.classList.add("hideElem");
+
+                inputReleaseDate.previousElementSibling.classList.add("hideElem");
+
+                inputAuthor.classList.remove("hideElem");
+
+            }
+
+        }
+
+    })
+})
+
+*/
+
 addNewProdBtn.addEventListener("click", (e) => {
 
     e.preventDefault();
 
-    let typeOfProd = "";
-
     let genreList = [];
-
-    radioBtns.forEach(btn => {
-
-        if(btn.checked) {
-
-            typeOfProd = btn.value;
-        } 
-    
-    })
 
     inputGenre.forEach(genre => {
 

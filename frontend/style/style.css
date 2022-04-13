@@ -435,4 +435,8 @@ h2 {
   font-family: "Mulish", sans-serif;
   margin: 5px 0px 20px 0px;
 }
+
+.hideElem {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
