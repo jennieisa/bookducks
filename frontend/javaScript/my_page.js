@@ -27,9 +27,9 @@ drawUserInfo();
 
 async function drawUserProds() {
 
-    let booksData = await getData(`http://localhost:1337/api/books?populate=*?filters[username][$eq]=${sessionStorage.getItem("user").username}`, sessionStorage.getItem("token"));
+    let booksData = await getData(`http://localhost:1337/api/books?filters[userId][$eq]=${sessionStorage.getItem("userId")}`, sessionStorage.getItem("token"));
 
-    let audiobooksData = await getData(`http://localhost:1337/api/audiobooks?populate=*?filters[username][$eq]=${sessionStorage.getItem("user").username}`, sessionStorage.getItem("token"));
+    let audiobooksData = await getData(`http://localhost:1337/api/audiobooks?filters[userId][$eq]=${sessionStorage.getItem("userId")}`, sessionStorage.getItem("token"));
 
     console.log(booksData.data, audiobooksData.data)
 
@@ -37,7 +37,7 @@ async function drawUserProds() {
 
         let { title, author } = book.attributes;
 
-        console.log(title, author)
+        console.log(book.attributes.userId)
 
         let theProd = `
             <article class="userProd">
@@ -54,7 +54,7 @@ async function drawUserProds() {
 
         let { title, releaseDate } = audiobook.attributes;
 
-        console.log(title, releaseDate)
+        console.log(audiobook.attributes.userId)
 
         let theProd = `
             <article class="userProd">

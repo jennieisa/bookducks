@@ -11,8 +11,8 @@ async function drawProducts() {
 
         let { title, length, cover, grade, genres, releaseDate } = audiobook.attributes;
 
-        console.log(title, length, cover.data.attributes.url, grade, genres, releaseDate);
-
+        let { username, email } = audiobook.attributes.users_permissions_user.data.attributes;
+       
         let audiobookGenres = "";
 
         genres.data.forEach(elem => {
@@ -23,13 +23,20 @@ async function drawProducts() {
 
         let theProd = `
             <article class="theProdArticle">
-                <p>ljudbok</p>
-                <h3>titel: ${title}</h3>
-                <p>längd: ${length} h</p>
-                <p>betyg: ${grade} av 10</p>
-                <p>genres: ${audiobookGenres}</p>
-                <p>utgiven: ${releaseDate}</p>
-                <img src="http://localhost:1337${cover.data.attributes.url}" alt="">
+                <section>
+                    <h3>ljudbok</h3>
+                    <p>titel: ${title}</p>
+                    <p>längd: ${length} h</p>
+                    <p>betyg: ${grade} av 10</p>
+                    <p>genres: ${audiobookGenres}</p>
+                    <p>utgiven: ${releaseDate}</p>
+                </section>
+                <section>
+                    <img src="http://localhost:1337${cover.data.attributes.url}" alt="">
+                    <h4>utlånaren:</h4>
+                    <p>${username}</p>
+                    <p>${email}</p>
+                </section>
             </article>
         `;
 
@@ -40,8 +47,8 @@ async function drawProducts() {
     booksData.data.forEach(book => {
 
         let { title, author, cover, grade, genres, pages } = book.attributes;
-        
-        console.log(title, author, cover.data.attributes.url, grade, genres, pages);
+
+        let { username, email } = book.attributes.users_permissions_user.data.attributes;
 
         let bookgenres = "";
 
@@ -53,13 +60,20 @@ async function drawProducts() {
 
         let theProd = `
             <article class="theProdArticle">
-                <p>bok</p>
-                <h3>titel: ${title}</h3>
-                <p>författare: ${author}</p>
-                <p>antal sidor: ${pages}</p>
-                <p>genres: ${bookgenres}</p>
-                <p>betyg: ${grade} av 10</p>
-                <img src="http://localhost:1337${cover.data.attributes.url}" alt="">
+                <section>
+                    <h3>bok</h3>
+                    <p>titel: ${title}</p>
+                    <p>författare: ${author}</p>
+                    <p>antal sidor: ${pages}</p>
+                    <p>genres: ${bookgenres}</p>
+                    <p>betyg: ${grade} av 10</p>
+                    </section>
+                <section>
+                    <img src="http://localhost:1337${cover.data.attributes.url}" alt="">
+                    <h4>utlånaren:</h4>
+                    <p>${username}</p>
+                    <p>${email}</p>
+                </section>
             </article>
         `;
 

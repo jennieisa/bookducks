@@ -363,17 +363,6 @@ h2 {
   height: 100%;
 }
 
-.theProdArticle {
-  width: 500px;
-  height: 300px;
-  background-color: white;
-  margin: 30px;
-}
-
-.theProdArticle img {
-  width: 90px;
-}
-
 .prodList {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -388,6 +377,29 @@ h2 {
   width: 80%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.theProdArticle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  margin: 30px;
+}
+
+.theProdArticle img {
+  width: 100px;
 }
 
 .noLinkStyle {

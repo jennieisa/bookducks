@@ -19,7 +19,7 @@ async function logIn() {
 
     sessionStorage.setItem("token", token);
 
-    sessionStorage.setItem("user", JSON.stringify(response.data.user));
+    sessionStorage.setItem("userId", JSON.stringify(response.data.user.id));
 
 }
 
