@@ -27,9 +27,9 @@ drawUserInfo();
 
 async function drawUserProds() {
 
-    let booksData = await getData(`http://localhost:1337/api/books?filters[creator][$eq]=${sessionStorage.getItem("user")}`, sessionStorage.getItem("token"));
+    let booksData = await getData(`http://localhost:1337/api/books?populate=*?filters[username][$eq]=${sessionStorage.getItem("user").username}`, sessionStorage.getItem("token"));
 
-    let audiobooksData = await getData(`http://localhost:1337/api/audiobooks?filters[creator][$eq]=${sessionStorage.getItem("user")}`, sessionStorage.getItem("token"));
+    let audiobooksData = await getData(`http://localhost:1337/api/audiobooks?populate=*?filters[username][$eq]=${sessionStorage.getItem("user").username}`, sessionStorage.getItem("token"));
 
     console.log(booksData.data, audiobooksData.data)
 

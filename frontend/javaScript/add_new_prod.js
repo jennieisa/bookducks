@@ -16,6 +16,10 @@ async function addNewBook(genres) {
     let imgData = new FormData();
     imgData.append("files", img[0]);
 
+    let userData = JSON.parse(sessionStorage.getItem("user"));
+
+    let userId = userData.id;
+
     //Laddar upp bilden i Strapi innan vi gör ett post request för hela boken
     await axios.post("http://localhost:1337/api/upload", imgData, {
 
@@ -37,7 +41,7 @@ async function addNewBook(genres) {
                 cover: coverId,
                 grade: inputGrade.value,
                 genres: genres,
-                creator: sessionStorage.getItem("user")          
+                users_permissions_user: userId
             }
         }, 
             {
@@ -56,6 +60,10 @@ async function addNewAudiobook(genres) {
     let img = document.querySelector("#inputFile").files;
     let imgData = new FormData();
     imgData.append("files", img[0]);
+
+    let userData = JSON.parse(sessionStorage.getItem("user"));
+
+    let userId = userData.id;
 
     //Laddar upp bilden i Strapi innan vi gör ett post request för hela boken
     await axios.post("http://localhost:1337/api/upload", imgData, {
@@ -78,7 +86,8 @@ async function addNewAudiobook(genres) {
                 grade: inputGrade.value,
                 releaseDate: inputReleaseDate.value,
                 genres: genres,
-                creator: sessionStorage.getItem("user")         
+                users_permissions_user: userId
+                       
             }
         }, 
             {
@@ -196,3 +205,5 @@ addNewProdBtn.addEventListener("click", (e) => {
 
     }
 })
+
+console.log(JSON.parse(sessionStorage.getItem("user")))

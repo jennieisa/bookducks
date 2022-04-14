@@ -48,9 +48,10 @@
       "target": "api::genre.genre",
       "mappedBy": "audiobook"
     },
-    "creator": {
-      "type": "string",
-      "required": false
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }

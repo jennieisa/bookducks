@@ -27,7 +27,7 @@ createUserBtn.addEventListener("click", async (e) => {
 
     let response = await registerUser();
 
-    console.log(response);
+    sessionStorage.setItem("user", JSON.stringify(response.data.user));
 
     if(response) {
 
