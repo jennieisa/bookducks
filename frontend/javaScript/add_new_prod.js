@@ -36,7 +36,8 @@ async function addNewBook(genres) {
                 pages: inputLength.value,
                 cover: coverId,
                 grade: inputGrade.value,
-                genres: genres          
+                genres: genres,
+                creator: sessionStorage.getItem("user")          
             }
         }, 
             {
@@ -76,7 +77,8 @@ async function addNewAudiobook(genres) {
                 cover: coverId,
                 grade: inputGrade.value,
                 releaseDate: inputReleaseDate.value,
-                genres: genres          
+                genres: genres,
+                creator: sessionStorage.getItem("user")         
             }
         }, 
             {

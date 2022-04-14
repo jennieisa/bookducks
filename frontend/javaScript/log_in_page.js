@@ -18,6 +18,7 @@ async function logIn() {
     console.log(token);
 
     sessionStorage.setItem("token", token);
+    sessionStorage.setItem("user", userNameLogInInput.value);
 
 }
 

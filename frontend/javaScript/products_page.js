@@ -2,7 +2,6 @@
 const prodList = document.querySelector(".prodList");
 
 //Funktioner
-
 async function drawProducts() {
 
     let audiobooksData = await getPublicData("http://localhost:1337/api/audiobooks?populate=*");
