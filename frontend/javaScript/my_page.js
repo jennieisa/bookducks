@@ -2,6 +2,7 @@
 const userInfoWrapper = document.querySelector(".userInfoWrapper");
 const addNewProdBtn = document.querySelector(".addNewProdBtn");
 const userProdList = document.querySelector(".userProdList");
+const logOutBtn = document.querySelector(".logOutBtn");
 
 //funktioner
 async function drawUserInfo() {
@@ -77,3 +78,12 @@ addNewProdBtn.addEventListener("click", () => {
 
 })
 
+logOutBtn.addEventListener("click", () => {
+
+    sessionStorage.removeItem("user");
+
+    sessionStorage.removeItem("token");
+    
+    window.location.href="landing_page.html";
+
+})
