@@ -6,7 +6,7 @@ const inputAuthor = document.querySelector("#inputAuthor");
 const inputLength = document.querySelector("#inputLength");
 const inputGrade = document.querySelector("#inputGrade");
 const inputGenre = document.querySelectorAll("[name='genre']");
-const inputReleaseDate = document.querySelector("#inputReleaseDate")
+const inputReleaseDate = document.querySelector("#inputReleaseDate");
 
 //Funktioner
 async function addNewBook(genres) {
@@ -49,7 +49,7 @@ async function addNewBook(genres) {
 
 }
 
-async function addNewAudiobook() {
+async function addNewAudiobook(genres) {
 
     //Hämtar ut filen (bilden) och placerar den i FormData
     let img = document.querySelector("#inputFile").files;
@@ -63,11 +63,11 @@ async function addNewAudiobook() {
             Authorization: `Bearer ${sessionStorage.getItem("token")}`
         }
     })
-    .then((response) => {
+    .then(async (response) => {
 
         let coverId = response.data[0].id;
 
-        axios.post("http://localhost:1337/api/audiobooks", {
+        let res = await axios.post("http://localhost:1337/api/audiobooks", {
 
             data: {
 
@@ -75,7 +75,7 @@ async function addNewAudiobook() {
                 length: inputLength.value,
                 cover: coverId,
                 grade: inputGrade.value,
-                releseDate,
+                releaseDate: inputReleaseDate.value,
                 genres: genres          
             }
         }, 
@@ -87,6 +87,7 @@ async function addNewAudiobook() {
 
     })
 
+    
 }
 
 
@@ -94,6 +95,7 @@ async function addNewAudiobook() {
 
 let typeOfProd = "";
 
+//Inte bästa lösningen med radio btn kanske ändra sen
 radioBtns[0].addEventListener("click", () => {
 
     radioBtns.forEach(btn => {
@@ -132,7 +134,6 @@ radioBtns[0].addEventListener("click", () => {
 
 }) 
 
-
 radioBtns[1].addEventListener("click", () => {
 
     radioBtns.forEach(btn => {
@@ -144,12 +145,10 @@ radioBtns[1].addEventListener("click", () => {
         }
 
         if(typeOfProd == "audiobooks") {
-
-            console.log(btn.value)
         
             inputAuthor.classList.add("hideElem");
-        
-            console.log(inputAuthor)
+
+            inputAuthor.previousElementSibling.classList.add("hideElem");
         
             inputReleaseDate.classList.remove("hideElem");
         
@@ -164,55 +163,16 @@ radioBtns[1].addEventListener("click", () => {
             inputAuthor.classList.remove("hideElem");
         
         }
-    })
-    
-    console.log(typeOfProd);
-    
+    })    
 }) 
-
-
-/*{
-
-    btn.addEventListener("click", () => {
-
-        if (btn.checked) {
-
-            if(typeOfProd == "audiobooks") {
-
-                console.log(btn.value)
-
-                inputAuthor.classList.add("hideElem");
-
-                console.log(inputAuthor)
-
-                inputReleaseDate.classList.remove("hideElem");
-
-                inputReleaseDate.previousElementSibling.classList.remove("hideElem");
-
-                input
-            
-            } else {
-
-                inputReleaseDate.classList.add("hideElem");
-
-                inputReleaseDate.previousElementSibling.classList.add("hideElem");
-
-                inputAuthor.classList.remove("hideElem");
-
-            }
-
-        }
-
-    })
-})
-
-*/
 
 addNewProdBtn.addEventListener("click", (e) => {
 
     e.preventDefault();
 
     let genreList = [];
+
+    console.log(inputReleaseDate.value)
 
     inputGenre.forEach(genre => {
 
@@ -224,15 +184,13 @@ addNewProdBtn.addEventListener("click", (e) => {
 
     })
 
-    console.log(genreList, typeOfProd, inputTitle.value, inputAuthor.value, inputLength.value, inputGrade.value, )
-
     if(typeOfProd == "books") {
 
         addNewBook(genreList);
 
     } else {
 
-        addNewAudiobook();
+        addNewAudiobook(genreList);
 
     }
 })
