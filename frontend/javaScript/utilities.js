@@ -11,3 +11,11 @@ async function getData(url, jwt) {
     return response.data;
 
 }
+
+async function getPublicData(url) {
+
+    let response = await axios.get(url);
+
+    return response.data;
+
+}
