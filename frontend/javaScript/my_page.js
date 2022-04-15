@@ -12,6 +12,7 @@ async function drawUserInfo() {
     if(data) {
 
         let userInfo = `
+            <h3>användaruppgifter</h3>
             <p>användarnamn: ${data.username}</p>
             <p>emailadress: ${data.email}</p>
             <p>id: ${data.id}</p>
@@ -23,7 +24,6 @@ async function drawUserInfo() {
     }
 
 }
-drawUserInfo();
 
 async function drawUserProds() {
 
@@ -69,9 +69,25 @@ async function drawUserProds() {
 
 }
 
-drawUserProds();
-
 //Eventlisterners
+function showMyPage() {
+
+    let loggedIn = checkUserStatus();
+
+    if (loggedIn === true) {
+
+        document.querySelector(".mySiteWrapper").classList.remove("hideElem");
+
+        drawUserInfo();
+
+        drawUserProds();
+
+    }
+
+}
+
+showMyPage();
+
 addNewProdBtn.addEventListener("click", () => {
 
     window.location.href="add_new_prod_page.html";

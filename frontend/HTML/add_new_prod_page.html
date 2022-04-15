@@ -17,7 +17,7 @@
             <!--<a href="#">
                 <i class="fa-solid fa-bars"></i>
             </a> -->
-            <a href="/frontend/HTML/log_in_page.html" class="noLinkStyle logInLink">logga in</a>
+            <a href="/frontend/HTML/log_in_page.html" class="noLinkStyle logInLink currentPage">logga in</a>
             <a href="/frontend/HTML/products_page.html" class="noLinkStyle">produkter</a>
             <a href="#" class="noLinkStyle">om oss</a>
         </nav>
@@ -25,7 +25,7 @@
             <h1>bookducks</h1>
         </a>
     </header>
-    <main class="addNewProdWrapper">
+    <main class="addNewProdWrapper hideElem">
         <h2>lägg till produkt</h2>
         <article class="addNewProdContentWrapper">
             <section class="radioBtnSection">
@@ -70,7 +70,7 @@
                                 <label for="inputSciFi" class="labelStyle">sci-fi</label>
                                 <input type="checkbox" input="inputAction" name="genre" value="7">
                                 <label for="inputAction" class="labelStyle">action</label>
-                                <input type="checkbox" id="inputCrime" name="genre" value="8">
+                                <nput type="checkbox" id="inputCrime" name="genre" value="8">
                                 <label for="inputCrime" class="labelStyle">kriminalare</label>
                                 <input type="checkbox" name="genre">
                             </section>
@@ -85,6 +85,7 @@
         </article>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/frontend/javaScript/utilities.js"></script>
     <script src="/frontend/javaScript/main.js"></script>
     <script src="/frontend/javaScript/add_new_prod.js"></script>
 </body>

@@ -99,8 +99,21 @@ async function addNewAudiobook(genres) {
     
 }
 
-
 //Eventlisterners
+
+function showAddNewProdPage() {
+
+    let loggedIn = checkUserStatus(); 
+
+    if (loggedIn === true) {
+
+        document.querySelector(".addNewProdWrapper").classList.remove("hideElem");
+
+    }
+
+}
+
+showAddNewProdPage();
 
 let typeOfProd = "";
 
