@@ -19,3 +19,4 @@ async function getPublicData(url) {
     return response.data;
 
 }
+

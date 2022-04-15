@@ -41,8 +41,8 @@ async function drawUserProds() {
 
         let theProd = `
             <article class="userProd">
-                <p>${title}</p>
-                <p>${author}</p>
+                <p>titel: ${title}</p>
+                <p>författare: ${author}</p>
             </article>
         `;
 
@@ -58,8 +58,8 @@ async function drawUserProds() {
 
         let theProd = `
             <article class="userProd">
-                <p>${title}</p>
-                <p>${releaseDate}</p>
+                <p>titel: ${title}</p>
+                <p>utgiven: ${releaseDate}</p>
             </article>
         `;
 

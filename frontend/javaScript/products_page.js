@@ -23,19 +23,24 @@ async function drawProducts() {
 
         let theProd = `
             <article class="theProdArticle">
-                <section>
+                <section class="">
                     <h3>ljudbok</h3>
-                    <p>titel: ${title}</p>
-                    <p>längd: ${length} h</p>
-                    <p>betyg: ${grade} av 10</p>
-                    <p>genres: ${audiobookGenres}</p>
-                    <p>utgiven: ${releaseDate}</p>
+                    <section class="">
+                        <p>titel: ${title}</p>
+                        <p>längd: ${length} h</p>
+                        <p>betyg: ${grade} av 10</p>
+                        <p>genres: ${audiobookGenres}</p>
+                        <p>utgiven: ${releaseDate}</p>
+                    </section>
+                    <section class="">
+                        <h4>kontaktuppgifter</h4>
+                        <p>${username}</p>
+                        <p>${email}</p>
+                    </section>
                 </section>
-                <section>
+                <section class="wrapperImgBtn">
                     <img src="http://localhost:1337${cover.data.attributes.url}" alt="">
-                    <h4>utlånaren:</h4>
-                    <p>${username}</p>
-                    <p>${email}</p>
+                    <button class="buttonStyle">låna</button>
                 </section>
             </article>
         `;
@@ -57,22 +62,28 @@ async function drawProducts() {
             bookgenres += " " + elem.attributes.name;
 
         })
+         
 
         let theProd = `
             <article class="theProdArticle">
-                <section>
+                <section class="">
                     <h3>bok</h3>
-                    <p>titel: ${title}</p>
-                    <p>författare: ${author}</p>
-                    <p>antal sidor: ${pages}</p>
-                    <p>genres: ${bookgenres}</p>
-                    <p>betyg: ${grade} av 10</p>
+                    <section class="">
+                        <p>titel: ${title}</p>
+                        <p>författare: ${author}</p>
+                        <p>antal sidor: ${pages}</p>
+                        <p>genres: ${bookgenres}</p>
+                        <p>betyg: ${grade} av 10</p>
                     </section>
-                <section>
+                    <section class="">
+                        <h4>kontaktuppgifte</h4>
+                        <p>${username}</p>
+                        <p>${email}</p>
+                    </section>
+                </section>
+                <section class="wrapperImgBtn">
                     <img src="http://localhost:1337${cover.data.attributes.url}" alt="">
-                    <h4>utlånaren:</h4>
-                    <p>${username}</p>
-                    <p>${email}</p>
+                    <button class="buttonStyle">låna</button>
                 </section>
             </article>
         `;
