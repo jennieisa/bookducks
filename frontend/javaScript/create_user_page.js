@@ -25,15 +25,23 @@ createUserBtn.addEventListener("click", async (e) => {
 
     e.preventDefault();
 
-    let response = await registerUser();
+    try {
 
-    sessionStorage.setItem("userId", JSON.stringify(response.data.user.id));
+        let response = await registerUser();
 
-    if(response) {
+        sessionStorage.setItem("userId", JSON.stringify(response.data.user.id));
 
-        window.location.href="log_in_page.html";
-        
-        alert("Din användare är nu skapad. Vänligen logga in.")
+        if(response) {
+
+            window.location.href="log_in_page.html";
+            
+            alert("Din användare är nu skapad. Vänligen logga in.")
+        }
+    
+    } catch {
+
+        alert("vänligen fyll i en mejladress och ett lösenord på minst 6 tecken.")
+
     }
 
 })

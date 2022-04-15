@@ -36,7 +36,16 @@ logInBtn.addEventListener("click", async (e) => {
 
     e.preventDefault();
 
-    await logIn();
+    try {
+
+        await logIn();
+
+
+    } catch {
+
+        alert("antingen har du fyllt i fel uppgifter eller så behöver du skapa en användare.")
+
+    }
 
     if (sessionStorage.getItem("token")) {
 
