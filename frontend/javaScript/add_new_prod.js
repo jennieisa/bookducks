@@ -69,11 +69,11 @@ async function addNewAudiobook(genres) {
             Authorization: `Bearer ${sessionStorage.getItem("token")}`
         }
     })
-    .then(async (response) => {
+    .then((response) => {
 
         let coverId = response.data[0].id;
 
-        let res = await axios.post("http://localhost:1337/api/audiobooks", {
+        axios.post("http://localhost:1337/api/audiobooks", {
 
             data: {
 
@@ -212,9 +212,11 @@ addNewProdBtn.addEventListener("click", (e) => {
 
     } else {
 
+        console.log(genreList)
+
         addNewAudiobook(genreList);
 
     }
 })
 
-console.log(JSON.parse(sessionStorage.getItem("user")))
+console.log(JSON.parse(sessionStorage.getItem("userId")))
