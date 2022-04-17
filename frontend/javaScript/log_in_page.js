@@ -15,8 +15,6 @@ async function logIn() {
 
     let token = response.data.jwt;
 
-    console.log(token);
-
     sessionStorage.setItem("token", token);
 
     sessionStorage.setItem("userId", JSON.stringify(response.data.user.id));

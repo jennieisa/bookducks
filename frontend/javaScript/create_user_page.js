@@ -14,8 +14,6 @@ async function registerUser() {
             password: passwordInput.value
         });
 
-        console.log(response)
-
         return response;
     
 }

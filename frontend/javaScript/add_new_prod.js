@@ -152,8 +152,6 @@ radioBtns[0].addEventListener("click", () => {
         }
     })
 
-    console.log(typeOfProd);
-
 }) 
 
 radioBtns[1].addEventListener("click", () => {
@@ -194,8 +192,6 @@ addNewProdBtn.addEventListener("click", (e) => {
 
     let genreList = [];
 
-    console.log(inputReleaseDate.value)
-
     inputGenre.forEach(genre => {
 
         if(genre.checked) {
@@ -212,11 +208,7 @@ addNewProdBtn.addEventListener("click", (e) => {
 
     } else {
 
-        console.log(genreList)
-
         addNewAudiobook(genreList);
 
     }
 })
-
-console.log(JSON.parse(sessionStorage.getItem("userId")))
