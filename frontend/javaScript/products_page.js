@@ -39,7 +39,7 @@ async function drawProducts() {
                     </section>
                 </section>
                 <section class="wrapperImgBtn">
-                    <img src="http://localhost:1337${cover.data.attributes.url}" alt="">
+                    <img src="http://localhost:1337${cover.data.attributes.url}" alt="produktbild">
                     <button class="buttonStyle">låna</button>
                 </section>
             </article>
@@ -82,7 +82,7 @@ async function drawProducts() {
                     </section>
                 </section>
                 <section class="wrapperImgBtn">
-                    <img src="http://localhost:1337${cover.data.attributes.url}" alt="">
+                    <img src="http://localhost:1337${cover.data.attributes.url}" alt="produktbild">
                     <button class="buttonStyle">låna</button>
                 </section>
             </article>
