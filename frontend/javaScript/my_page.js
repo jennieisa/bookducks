@@ -16,7 +16,7 @@ async function drawUserInfo() {
             <p>användarnamn: ${data.username}</p>
             <p>emailadress: ${data.email}</p>
             <p>id: ${data.id}</p>
-            <p>användare skapades: ${data.createdAt}</p>
+            <p>användare skapades: ${data.createdAt.slice("T", 10)}</p>
         `;
 
         userInfoWrapper.innerHTML = userInfo;
@@ -41,6 +41,7 @@ async function drawUserProds() {
 
         let theProd = `
             <article class="userProd">
+                <p>bok</p>
                 <p>titel: ${title}</p>
                 <p>författare: ${author}</p>
             </article>
@@ -58,6 +59,7 @@ async function drawUserProds() {
 
         let theProd = `
             <article class="userProd">
+                <p>ljudbok</p>
                 <p>titel: ${title}</p>
                 <p>utgiven: ${releaseDate}</p>
             </article>

@@ -159,6 +159,7 @@ h2 {
     background-color: white;
     width: 40%;
     padding: 15px;
+    height: 300px;
 
     h3 {
         font-family: $sansSerifFont;
@@ -177,12 +178,22 @@ h2 {
     width: 40%;
     padding: 15px;
 
+    article {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+    }
+
     h3 {
         font-family: $sansSerifFont;
     }
 
     button {
         background-color: $mintGreen;
+    }
+
+    p {
+        margin: 0px;
     }
 }
 
