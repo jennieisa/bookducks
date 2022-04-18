@@ -76,7 +76,7 @@ async function drawProducts() {
                         <p>betyg: ${grade} av 10</p>
                     </section>
                     <section class="">
-                        <h4>kontaktuppgifte</h4>
+                        <h4>kontaktuppgifter</h4>
                         <p>${username}</p>
                         <p>${email}</p>
                     </section>

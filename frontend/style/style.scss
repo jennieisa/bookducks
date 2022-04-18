@@ -55,7 +55,7 @@ h2 {
 //För startsidan
 
 .landingPageContent {
-    width: 90%;
+    width: 90vw;
     display: flex;
     flex-direction: column;
 
@@ -98,7 +98,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95vw;
+    width: 90vw;
     height: 100vh;
     background-color: $lightBeige;
 }
@@ -115,7 +115,7 @@ h2 {
 //För skapa användare sidan
 .createUserContent {
     background-color: $mintGreen;
-    width: 95vw;
+    width: 90vw;
     height: 100vh;
 }
 
@@ -133,7 +133,7 @@ h2 {
 .mySiteWrapper {
     background-color: $babyBlue;
     display: flex;
-    width: 95vw;
+    width: 90vw;
 }
 
 .mySiteContent {
@@ -190,6 +190,7 @@ h2 {
 
     button {
         background-color: $mintGreen;
+        width: 200px;
     }
 
     p {
@@ -224,7 +225,7 @@ h2 {
 
 .addNewProdWrapper {
     background-color: $lightBeige;
-    width: 95vw;
+    width: 90vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -280,7 +281,7 @@ h2 {
 
 .productListWrapper {
     background-color: $mintGreen;
-    width: 95vw;
+    width: 90vw;
     height: 100%;
 }
 
@@ -296,7 +297,7 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 450px;
+    width: 400px;
     height: 300px;
     background-color: white;
     margin: 30px;
@@ -322,6 +323,7 @@ h2 {
     }
 
     button {
+        align-self: center;
         width: 150px;
     }
 

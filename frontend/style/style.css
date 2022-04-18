@@ -77,7 +77,7 @@ h2 {
 }
 
 .landingPageContent {
-  width: 90%;
+  width: 90vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,7 +150,7 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 95vw;
+  width: 90vw;
   height: 100vh;
   background-color: #e1cfc1;
 }
@@ -171,7 +171,7 @@ h2 {
 
 .createUserContent {
   background-color: #bec9c5;
-  width: 95vw;
+  width: 90vw;
   height: 100vh;
 }
 
@@ -194,7 +194,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 95vw;
+  width: 90vw;
 }
 
 .mySiteContent {
@@ -288,6 +288,7 @@ h2 {
 
 .userProdsWrapper button {
   background-color: #bec9c5;
+  width: 200px;
 }
 
 .userProdsWrapper p {
@@ -328,7 +329,7 @@ h2 {
 
 .addNewProdWrapper {
   background-color: #e1cfc1;
-  width: 95vw;
+  width: 90vw;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -409,7 +410,7 @@ h2 {
 
 .productListWrapper {
   background-color: #bec9c5;
-  width: 95vw;
+  width: 90vw;
   height: 100%;
 }
 
@@ -439,7 +440,7 @@ h2 {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 450px;
+  width: 400px;
   height: 300px;
   background-color: white;
   margin: 30px;
@@ -475,6 +476,9 @@ h2 {
 }
 
 .theProdArticle button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   width: 150px;
 }
 
